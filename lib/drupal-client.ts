@@ -1,15 +1,20 @@
 /**
  * Drupal client singleton using decoupled-client.
  *
- * Usage:
- *   import { getClient } from '@/lib/drupal-client'
- *   const client = getClient()
- *   const page = await client.getEntryByPath('/about')
+ * This clone defaults to demo mode and must also build cleanly without a
+ * generated Drupal schema. Keep the client shape local so Vercel does not
+ * depend on `decoupled-cli schema sync` having run before `next build`.
  */
 
 import { createClient } from 'decoupled-client'
-import type { TypedClient } from '@/schema/client'
 import { isDemoMode, handleMockQuery } from './demo-mode'
+
+type TypedClient = {
+  getEntries: (...args: any[]) => Promise<any>
+  getEntry: (...args: any[]) => Promise<any>
+  getEntryByPath: (path: string) => Promise<any>
+  raw: (query: any, variables?: any) => Promise<any>
+}
 
 let _client: TypedClient | null = null
 let _mockClient: TypedClient | null = null
@@ -20,50 +25,45 @@ function createMockTypedClient(): TypedClient {
   _mockClient = {
     async getEntries() { return [] },
     async getEntry() { return null },
-    async getEntryByPath(path) {
-      // For homepage, return the first homepage node from mock data
+    async getEntryByPath(path: string) {
       if (!path || path === '/') {
         const result = handleMockQuery(JSON.stringify({
           query: 'GetHomepageData nodeHomepages',
-          variables: {}
+          variables: {},
         }))
         return result?.data?.nodeHomepages?.nodes?.[0] || null
       }
-      // For other paths, try route lookup
+
       const result = handleMockQuery(JSON.stringify({
         query: 'route',
-        variables: { path }
+        variables: { path },
       }))
       return result?.data?.route?.entity || null
     },
-    async raw(query, variables) {
-      const result = handleMockQuery(JSON.stringify({ query: typeof query === 'string' ? query : '', variables })); return result?.data ?? result
+    async raw(query: any, variables?: any) {
+      const result = handleMockQuery(JSON.stringify({
+        query: typeof query === 'string' ? query : '',
+        variables,
+      }))
+      return result?.data ?? result
     },
-  } as TypedClient
+  }
 
   return _mockClient
 }
 
 export function getClient(): TypedClient {
-  if (isDemoMode()) {
-    return createMockTypedClient()
-  }
-
+  if (isDemoMode()) return createMockTypedClient()
   if (_client) return _client
-
-  let createTypedClient: ((base: any) => TypedClient) | null = null
-  try {
-    createTypedClient = require('@/schema/client').createTypedClient
-  } catch {
-    // schema/client.ts not generated yet
-  }
 
   const baseUrl = process.env.NEXT_PUBLIC_DRUPAL_BASE_URL
   const clientId = process.env.DRUPAL_CLIENT_ID
   const clientSecret = process.env.DRUPAL_CLIENT_SECRET
 
   if (!baseUrl || !clientId || !clientSecret) {
-    throw new Error('Missing Drupal credentials. Set NEXT_PUBLIC_DRUPAL_BASE_URL, DRUPAL_CLIENT_ID, DRUPAL_CLIENT_SECRET.')
+    throw new Error(
+      'Missing Drupal credentials. Set NEXT_PUBLIC_DRUPAL_BASE_URL, DRUPAL_CLIENT_ID, DRUPAL_CLIENT_SECRET.',
+    )
   }
 
   const base = createClient({
@@ -77,25 +77,23 @@ export function getClient(): TypedClient {
       } as RequestInit)) as typeof globalThis.fetch,
   })
 
-  if (createTypedClient) {
-    _client = createTypedClient(base)
-  } else {
-    _client = {
-      async getEntries() { return [] },
-      async getEntry() { return null },
-      async getEntryByPath(path) {
-        return base.queryByPath(path, `
-          query ($path: String!) {
-            route(path: $path) {
-              ... on RouteInternal {
-                entity { ... on NodePage { __typename id title path body { processed } } }
-              }
+  _client = {
+    async getEntries() { return [] },
+    async getEntry() { return null },
+    async getEntryByPath(path: string) {
+      return base.queryByPath(path, `
+        query ($path: String!) {
+          route(path: $path) {
+            ... on RouteInternal {
+              entity { ... on NodePage { __typename id title path body { processed } } }
             }
           }
-        `)
-      },
-      async raw(query, variables) { return base.query(query, variables) },
-    } as TypedClient
+        }
+      `)
+    },
+    async raw(query: any, variables?: any) {
+      return base.query(query, variables)
+    },
   }
 
   return _client
