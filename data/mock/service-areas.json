@@ -1,0 +1,129 @@
+{
+  "data": {
+    "nodeServiceAreas": {
+      "__typename": "NodeServiceAreaConnection",
+      "nodes": [
+        {
+          "__typename": "NodeServiceArea",
+          "id": "area-north",
+          "title": "North County",
+          "path": "/service-areas/north-county",
+          "body": {
+            "processed": "<p>ComfortPro HVAC proudly serves the North County area including Springfield, Greenville, and surrounding communities. Our local technicians provide fast response times and reliable service.</p>",
+            "summary": "ComfortPro HVAC proudly serves the North County area including Springfield, Greenville, and surrounding communities. Our local technicians provide fast response times and reliable service."
+          },
+          "zipCodes": "97201, 97202, 97203, 97204, 97205",
+          "image": {
+            "url": "https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=800&q=80",
+            "alt": "North County Service Area",
+            "width": 800,
+            "height": 533,
+            "variations": [
+              {
+                "name": "LARGE",
+                "url": "https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=800&q=80",
+                "width": 800,
+                "height": 533
+              },
+              {
+                "name": "MEDIUM",
+                "url": "https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=480&q=80",
+                "width": 480,
+                "height": 320
+              },
+              {
+                "name": "THUMBNAIL",
+                "url": "https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=200&q=80",
+                "width": 200,
+                "height": 133
+              }
+            ]
+          },
+          "created": {
+            "timestamp": 1760000000
+          }
+        },
+        {
+          "__typename": "NodeServiceArea",
+          "id": "area-south",
+          "title": "South County",
+          "path": "/service-areas/south-county",
+          "body": {
+            "processed": "<p>Our South County team covers Lake View, Riverside, and the greater metro south region. Same-day service available for most calls.</p>",
+            "summary": "Our South County team covers Lake View, Riverside, and the greater metro south region. Same-day service available for most calls."
+          },
+          "zipCodes": "97206, 97207, 97208, 97209, 97210",
+          "image": {
+            "url": "https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=800&q=80",
+            "alt": "South County Service Area",
+            "width": 800,
+            "height": 533,
+            "variations": [
+              {
+                "name": "LARGE",
+                "url": "https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=800&q=80",
+                "width": 800,
+                "height": 533
+              },
+              {
+                "name": "MEDIUM",
+                "url": "https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=480&q=80",
+                "width": 480,
+                "height": 320
+              },
+              {
+                "name": "THUMBNAIL",
+                "url": "https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=200&q=80",
+                "width": 200,
+                "height": 133
+              }
+            ]
+          },
+          "created": {
+            "timestamp": 1760000000
+          }
+        },
+        {
+          "__typename": "NodeServiceArea",
+          "id": "area-east",
+          "title": "East Metro",
+          "path": "/service-areas/east-metro",
+          "body": {
+            "processed": "<p>Covering the East Metro area from Fairview to Gresham and beyond. Our technicians know the unique HVAC needs of homes and businesses in this region.</p>",
+            "summary": "Covering the East Metro area from Fairview to Gresham and beyond. Our technicians know the unique HVAC needs of homes and businesses in this region."
+          },
+          "zipCodes": "97211, 97212, 97213, 97214, 97215",
+          "image": {
+            "url": "https://images.unsplash.com/photo-1480714378408-67cf0d13bc1b?w=800&q=80",
+            "alt": "East Metro Service Area",
+            "width": 800,
+            "height": 533,
+            "variations": [
+              {
+                "name": "LARGE",
+                "url": "https://images.unsplash.com/photo-1480714378408-67cf0d13bc1b?w=800&q=80",
+                "width": 800,
+                "height": 533
+              },
+              {
+                "name": "MEDIUM",
+                "url": "https://images.unsplash.com/photo-1480714378408-67cf0d13bc1b?w=480&q=80",
+                "width": 480,
+                "height": 320
+              },
+              {
+                "name": "THUMBNAIL",
+                "url": "https://images.unsplash.com/photo-1480714378408-67cf0d13bc1b?w=200&q=80",
+                "width": 200,
+                "height": 133
+              }
+            ]
+          },
+          "created": {
+            "timestamp": 1760000000
+          }
+        }
+      ]
+    }
+  }
+}

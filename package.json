@@ -1,0 +1,49 @@
+{
+  "name": "decoupled-hvac",
+  "version": "0.1.1",
+  "private": true,
+  "engines": {
+    "node": ">=18.18.0",
+    "npm": ">=9.0.0"
+  },
+  "scripts": {
+    "dev": "WATCHPACK_POLLING=true next dev --webpack",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "setup": "npx decoupled-cli@latest setup --content data/hvac-content.json",
+    "setup-content": "npx decoupled-cli@latest content import --file data/hvac-content.json",
+    "setup-content:preview": "npx decoupled-cli@latest content import --file data/hvac-content.json --preview",
+    "build:cloudflare": "opennextjs-cloudflare build",
+    "sync-schema": "npx decoupled-cli@latest schema sync"
+  },
+  "dependencies": {
+    "@apollo/client": "^3.13.9",
+    "@tailwindcss/typography": "^0.5.16",
+    "clsx": "^2.1.1",
+    "decoupled-client": "^0.2.0",
+    "dotenv": "^17.2.1",
+    "lucide-react": "^0.539.0",
+    "next": "^16.1.1",
+    "node-fetch": "^3.3.2",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1"
+  },
+  "devDependencies": {
+    "@opennextjs/cloudflare": "^1.17.1",
+    "@playwright/test": "^1.59.1",
+    "@types/node": "^22",
+    "@types/react": "^19.1.10",
+    "@types/react-dom": "^19.1.7",
+    "autoprefixer": "^10.4.20",
+    "decoupled-cli": "^2.2.1",
+    "eslint": "^9",
+    "eslint-config-next": "^16.1.1",
+    "postcss": "^8.4.47",
+    "tailwindcss": "^3.4.17",
+    "tsx": "^4.20.4",
+    "typescript": "^5",
+    "wrangler": "^4.71.0"
+  },
+  "description": "decoupled-hvac - A Decoupled.io starter"
+}

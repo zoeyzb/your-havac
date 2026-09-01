@@ -1,0 +1,101 @@
+{
+  "model": [
+    {
+      "bundle": "homepage",
+      "label": "Homepage",
+      "description": "HVAC company homepage with hero, features, and CTA",
+      "fields": [
+        { "id": "hero_title", "label": "Hero Title", "type": "string" },
+        { "id": "hero_subtitle", "label": "Hero Subtitle", "type": "string" },
+        { "id": "hero_description", "label": "Hero Description", "type": "text" },
+        { "id": "features_items", "label": "Feature Items", "type": "paragraph(feature_item)[]" },
+        { "id": "cta_title", "label": "CTA Title", "type": "string" },
+        { "id": "cta_description", "label": "CTA Description", "type": "text" },
+        { "id": "cta_primary", "label": "Primary CTA", "type": "string" },
+        { "id": "cta_secondary", "label": "Secondary CTA", "type": "string" }
+      ]
+    },
+    {
+      "bundle": "service",
+      "label": "Service",
+      "description": "HVAC services offered",
+      "body": true,
+      "fields": [
+        { "id": "image", "label": "Service Image", "type": "image" }
+      ]
+    },
+    {
+      "bundle": "service_area",
+      "label": "Service Area",
+      "description": "Geographic areas served",
+      "body": true,
+      "fields": [
+        { "id": "zip_codes", "label": "Zip Codes", "type": "string" },
+        { "id": "image", "label": "Area Image", "type": "image" }
+      ]
+    },
+    {
+      "bundle": "testimonial",
+      "label": "Testimonial",
+      "description": "Client reviews and testimonials",
+      "body": true,
+      "fields": [
+        { "id": "client_name", "label": "Client Name", "type": "string" },
+        { "id": "service_received", "label": "Service Received", "type": "string" },
+        { "id": "rating", "label": "Rating", "type": "integer" },
+        { "id": "photo", "label": "Client Photo", "type": "image" }
+      ]
+    },
+    {
+      "bundle": "page",
+      "label": "Basic Page",
+      "description": "Static content pages",
+      "body": true,
+      "fields": []
+    },
+    {
+      "entity": "paragraph",
+      "bundle": "feature_item",
+      "label": "Feature Item",
+      "description": "Feature highlight with icon, title, and description",
+      "fields": [
+        { "id": "icon", "label": "Icon", "type": "string" },
+        { "id": "title", "label": "Title", "type": "string!" },
+        { "id": "description", "label": "Description", "type": "text" }
+      ]
+    }
+  ],
+  "content": [
+    { "id": "feature-emergency", "type": "paragraph.feature_item", "values": { "icon": "clock", "title": "24/7 Emergency Service", "description": "Round-the-clock emergency HVAC repair when you need it most." } },
+    { "id": "feature-certified", "type": "paragraph.feature_item", "values": { "icon": "shield", "title": "Licensed & Insured", "description": "Fully licensed, bonded, and insured technicians you can trust." } },
+    { "id": "feature-guarantee", "type": "paragraph.feature_item", "values": { "icon": "award", "title": "Satisfaction Guaranteed", "description": "100% satisfaction guarantee on all our work and installations." } },
+    { "id": "feature-financing", "type": "paragraph.feature_item", "values": { "icon": "dollar-sign", "title": "Flexible Financing", "description": "Affordable payment plans to fit any budget for new system installations." } },
+    {
+      "id": "homepage", "type": "node.homepage", "path": "/homepage",
+      "values": {
+        "title": "ComfortPro HVAC",
+        "hero_title": "Your Comfort Is Our Priority",
+        "hero_subtitle": "Expert Heating & Cooling Solutions",
+        "hero_description": "<p>From emergency repairs to complete system installations, ComfortPro HVAC delivers reliable heating and cooling solutions for homes and businesses. Available 24/7 for your comfort needs.</p>",
+        "features_items": ["@feature-emergency", "@feature-certified", "@feature-guarantee", "@feature-financing"],
+        "cta_title": "Need HVAC Service?",
+        "cta_description": "<p>Whether it is a routine maintenance check or an emergency repair, our certified technicians are ready to help. Schedule your service today.</p>",
+        "cta_primary": "Schedule Service",
+        "cta_secondary": "Call Now"
+      }
+    },
+    { "id": "service-ac", "type": "node.service", "path": "/services/air-conditioning", "values": { "title": "Air Conditioning", "body": "<p>Stay cool all summer with our comprehensive air conditioning services. We install, repair, and maintain all major AC brands including central air systems, ductless mini-splits, and heat pumps.</p><h2>Our AC Services</h2><ul><li>New AC system installation</li><li>AC repair and diagnostics</li><li>Seasonal tune-ups and maintenance</li><li>Ductless mini-split systems</li><li>Indoor air quality solutions</li></ul>", "image": { "uri": "https://images.unsplash.com/photo-1585771724684-38269d6639fd?w=800&q=80", "alt": "Air Conditioning Service" } } },
+    { "id": "service-heating", "type": "node.service", "path": "/services/heating", "values": { "title": "Heating Systems", "body": "<p>Keep your home warm and comfortable with our expert heating services. We work with furnaces, boilers, heat pumps, and radiant heating systems to ensure reliable warmth all winter long.</p><h2>Our Heating Services</h2><ul><li>Furnace installation and repair</li><li>Boiler maintenance</li><li>Heat pump systems</li><li>Radiant floor heating</li><li>Emergency heating repair</li></ul>", "image": { "uri": "https://images.unsplash.com/photo-1513694203232-719a280e022f?w=800&q=80", "alt": "Heating System Service" } } },
+    { "id": "service-maintenance", "type": "node.service", "path": "/services/preventive-maintenance", "values": { "title": "Preventive Maintenance", "body": "<p>Regular maintenance keeps your HVAC system running efficiently and extends its lifespan. Our maintenance plans include seasonal tune-ups, filter replacements, and comprehensive system inspections.</p><h2>Maintenance Benefits</h2><ul><li>Lower energy bills</li><li>Fewer breakdowns</li><li>Extended equipment life</li><li>Priority service scheduling</li><li>Discount on repairs</li></ul>", "image": { "uri": "https://images.unsplash.com/photo-1621905252507-b35492cc74b4?w=800&q=80", "alt": "HVAC Maintenance" } } },
+    { "id": "service-duct", "type": "node.service", "path": "/services/duct-cleaning", "values": { "title": "Duct Cleaning & Sealing", "body": "<p>Improve your indoor air quality and system efficiency with professional duct cleaning and sealing services. We remove dust, allergens, and debris that accumulate in your ductwork over time.</p><h2>What We Do</h2><ul><li>Complete duct system cleaning</li><li>Duct sealing and insulation</li><li>Air quality testing</li><li>Dryer vent cleaning</li><li>UV air purification installation</li></ul>", "image": { "uri": "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=800&q=80", "alt": "Duct Cleaning Service" } } },
+    { "id": "area-north", "type": "node.service_area", "path": "/service-areas/north-county", "values": { "title": "North County", "body": "<p>ComfortPro HVAC proudly serves the North County area including Springfield, Greenville, and surrounding communities. Our local technicians provide fast response times and reliable service.</p>", "zip_codes": "97201, 97202, 97203, 97204, 97205", "image": { "uri": "https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=800&q=80", "alt": "North County Service Area" } } },
+    { "id": "area-south", "type": "node.service_area", "path": "/service-areas/south-county", "values": { "title": "South County", "body": "<p>Our South County team covers Lake View, Riverside, and the greater metro south region. Same-day service available for most calls.</p>", "zip_codes": "97206, 97207, 97208, 97209, 97210", "image": { "uri": "https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=800&q=80", "alt": "South County Service Area" } } },
+    { "id": "area-east", "type": "node.service_area", "path": "/service-areas/east-metro", "values": { "title": "East Metro", "body": "<p>Covering the East Metro area from Fairview to Gresham and beyond. Our technicians know the unique HVAC needs of homes and businesses in this region.</p>", "zip_codes": "97211, 97212, 97213, 97214, 97215", "image": { "uri": "https://images.unsplash.com/photo-1480714378408-67cf0d13bc1b?w=800&q=80", "alt": "East Metro Service Area" } } },
+    { "id": "testimonial-1", "type": "node.testimonial", "path": "/testimonials/fast-ac-repair", "values": { "title": "Fast AC Repair", "body": "<p>Our air conditioner broke down on the hottest day of the year. ComfortPro had a technician at our house within 2 hours and had it running again before dinner. Incredible service!</p>", "client_name": "Jennifer Walsh", "service_received": "Air Conditioning Repair", "rating": 5, "photo": { "uri": "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400&q=80", "alt": "Jennifer Walsh" } } },
+    { "id": "testimonial-2", "type": "node.testimonial", "path": "/testimonials/new-furnace-install", "values": { "title": "Excellent Furnace Installation", "body": "<p>ComfortPro installed a new high-efficiency furnace in our home. The team was professional, clean, and explained everything thoroughly. Our energy bills have dropped significantly.</p>", "client_name": "Robert Martinez", "service_received": "Furnace Installation", "rating": 5, "photo": { "uri": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&q=80", "alt": "Robert Martinez" } } },
+    { "id": "testimonial-3", "type": "node.testimonial", "path": "/testimonials/maintenance-plan", "values": { "title": "Great Maintenance Program", "body": "<p>We have been on the annual maintenance plan for 3 years now. Our system runs like new and we have not had a single unexpected breakdown. Worth every penny.</p>", "client_name": "Lisa Chen", "service_received": "Preventive Maintenance", "rating": 5, "photo": { "uri": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&q=80", "alt": "Lisa Chen" } } },
+    { "id": "testimonial-4", "type": "node.testimonial", "path": "/testimonials/duct-cleaning-review", "values": { "title": "Noticeable Air Quality Improvement", "body": "<p>After having our ducts cleaned by ComfortPro, the difference in air quality was immediately noticeable. My allergies have improved dramatically. Highly recommend their duct cleaning service.</p>", "client_name": "David Thompson", "service_received": "Duct Cleaning", "rating": 4, "photo": { "uri": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&q=80", "alt": "David Thompson" } } },
+    { "id": "page-about", "type": "node.page", "path": "/about", "values": { "title": "About ComfortPro HVAC", "body": "<p>ComfortPro HVAC has been providing reliable heating, ventilation, and air conditioning services since 2005. Our team of certified technicians is committed to keeping your home and business comfortable year-round.</p><h2>Our Mission</h2><p>To deliver exceptional HVAC services with honest pricing, quality workmanship, and outstanding customer care.</p><h2>Why Choose Us</h2><ul><li><strong>Certified Technicians</strong> - EPA certified and factory trained</li><li><strong>24/7 Availability</strong> - Emergency service when you need it</li><li><strong>Transparent Pricing</strong> - No hidden fees or surprises</li><li><strong>Quality Parts</strong> - We use only manufacturer-approved parts</li></ul>" } },
+    { "id": "page-contact", "type": "node.page", "path": "/contact", "values": { "title": "Contact Us", "body": "<h2>Schedule Your Service</h2><p>Ready to schedule an appointment? Contact our friendly team today.</p><h2>Office Location</h2><p>ComfortPro HVAC<br/>2850 SE Division St<br/>Portland, OR 97202</p><h2>Hours</h2><ul><li><strong>Monday - Friday:</strong> 7:00 AM - 6:00 PM</li><li><strong>Saturday:</strong> 8:00 AM - 2:00 PM</li><li><strong>Emergency Service:</strong> 24/7</li></ul><h2>Phone & Email</h2><p>Phone: (503) 555-HVAC<br/>Email: service@comfortprohvac.com</p>" } }
+  ]
+}

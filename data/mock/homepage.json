@@ -1,0 +1,70 @@
+{
+  "data": {
+    "nodeHomepages": {
+      "__typename": "NodeHomepageConnection",
+      "nodes": [
+        {
+          "__typename": "NodeHomepage",
+          "id": "homepage",
+          "title": "ComfortPro HVAC",
+          "path": "/homepage",
+          "heroTitle": "Your Comfort Is Our Priority",
+          "heroSubtitle": "Expert Heating & Cooling Solutions",
+          "heroDescription": {
+            "processed": "<p>From emergency repairs to complete system installations, ComfortPro HVAC delivers reliable heating and cooling solutions for homes and businesses. Available 24/7 for your comfort needs.</p>",
+            "summary": "From emergency repairs to complete system installations, ComfortPro HVAC delivers reliable heating and cooling solutions for homes and businesses. Available 24/7 for your comfort needs."
+          },
+          "featuresItems": [
+            {
+              "__typename": "ParagraphFeatureItem",
+              "id": "feature-emergency",
+              "title": "24/7 Emergency Service",
+              "icon": "clock",
+              "description": {
+                "processed": "Round-the-clock emergency HVAC repair when you need it most.",
+                "summary": "Round-the-clock emergency HVAC repair when you need it most."
+              }
+            },
+            {
+              "__typename": "ParagraphFeatureItem",
+              "id": "feature-certified",
+              "title": "Licensed & Insured",
+              "icon": "shield",
+              "description": {
+                "processed": "Fully licensed, bonded, and insured technicians you can trust.",
+                "summary": "Fully licensed, bonded, and insured technicians you can trust."
+              }
+            },
+            {
+              "__typename": "ParagraphFeatureItem",
+              "id": "feature-guarantee",
+              "title": "Satisfaction Guaranteed",
+              "icon": "award",
+              "description": {
+                "processed": "100% satisfaction guarantee on all our work and installations.",
+                "summary": "100% satisfaction guarantee on all our work and installations."
+              }
+            },
+            {
+              "__typename": "ParagraphFeatureItem",
+              "id": "feature-financing",
+              "title": "Flexible Financing",
+              "icon": "dollar-sign",
+              "description": {
+                "processed": "Affordable payment plans to fit any budget for new system installations.",
+                "summary": "Affordable payment plans to fit any budget for new system installations."
+              }
+            }
+          ],
+          "ctaTitle": "Need HVAC Service?",
+          "ctaDescription": {
+            "processed": "<p>Whether it is a routine maintenance check or an emergency repair, our certified technicians are ready to help. Schedule your service today.</p>",
+            "summary": "Whether it is a routine maintenance check or an emergency repair, our certified technicians are ready to help. Schedule your service today."
+          },
+          "ctaPrimary": "Schedule Service",
+          "ctaSecondary": "Call Now"
+        }
+      ]
+    }
+  }
+}

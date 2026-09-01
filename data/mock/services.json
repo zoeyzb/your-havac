@@ -1,0 +1,165 @@
+{
+  "data": {
+    "nodeServices": {
+      "__typename": "NodeServiceConnection",
+      "nodes": [
+        {
+          "__typename": "NodeService",
+          "id": "service-ac",
+          "title": "Air Conditioning",
+          "path": "/services/air-conditioning",
+          "body": {
+            "processed": "<p>Stay cool all summer with our comprehensive air conditioning services. We install, repair, and maintain all major AC brands including central air systems, ductless mini-splits, and heat pumps.</p><h2>Our AC Services</h2><ul><li>New AC system installation</li><li>AC repair and diagnostics</li><li>Seasonal tune-ups and maintenance</li><li>Ductless mini-split systems</li><li>Indoor air quality solutions</li></ul>",
+            "summary": "Stay cool all summer with our comprehensive air conditioning services. We install, repair, and maintain all major AC brands including central air systems, ductless mini-splits, and heat pumps.Our AC S"
+          },
+          "image": {
+            "url": "https://images.unsplash.com/photo-1585771724684-38269d6639fd?w=800&q=80",
+            "alt": "Air Conditioning Service",
+            "width": 800,
+            "height": 533,
+            "variations": [
+              {
+                "name": "LARGE",
+                "url": "https://images.unsplash.com/photo-1585771724684-38269d6639fd?w=800&q=80",
+                "width": 800,
+                "height": 533
+              },
+              {
+                "name": "MEDIUM",
+                "url": "https://images.unsplash.com/photo-1585771724684-38269d6639fd?w=480&q=80",
+                "width": 480,
+                "height": 320
+              },
+              {
+                "name": "THUMBNAIL",
+                "url": "https://images.unsplash.com/photo-1585771724684-38269d6639fd?w=200&q=80",
+                "width": 200,
+                "height": 133
+              }
+            ]
+          },
+          "created": {
+            "timestamp": 1760000000
+          }
+        },
+        {
+          "__typename": "NodeService",
+          "id": "service-heating",
+          "title": "Heating Systems",
+          "path": "/services/heating",
+          "body": {
+            "processed": "<p>Keep your home warm and comfortable with our expert heating services. We work with furnaces, boilers, heat pumps, and radiant heating systems to ensure reliable warmth all winter long.</p><h2>Our Heating Services</h2><ul><li>Furnace installation and repair</li><li>Boiler maintenance</li><li>Heat pump systems</li><li>Radiant floor heating</li><li>Emergency heating repair</li></ul>",
+            "summary": "Keep your home warm and comfortable with our expert heating services. We work with furnaces, boilers, heat pumps, and radiant heating systems to ensure reliable warmth all winter long.Our Heating Serv"
+          },
+          "image": {
+            "url": "https://images.unsplash.com/photo-1513694203232-719a280e022f?w=800&q=80",
+            "alt": "Heating System Service",
+            "width": 800,
+            "height": 533,
+            "variations": [
+              {
+                "name": "LARGE",
+                "url": "https://images.unsplash.com/photo-1513694203232-719a280e022f?w=800&q=80",
+                "width": 800,
+                "height": 533
+              },
+              {
+                "name": "MEDIUM",
+                "url": "https://images.unsplash.com/photo-1513694203232-719a280e022f?w=480&q=80",
+                "width": 480,
+                "height": 320
+              },
+              {
+                "name": "THUMBNAIL",
+                "url": "https://images.unsplash.com/photo-1513694203232-719a280e022f?w=200&q=80",
+                "width": 200,
+                "height": 133
+              }
+            ]
+          },
+          "created": {
+            "timestamp": 1760000000
+          }
+        },
+        {
+          "__typename": "NodeService",
+          "id": "service-maintenance",
+          "title": "Preventive Maintenance",
+          "path": "/services/preventive-maintenance",
+          "body": {
+            "processed": "<p>Regular maintenance keeps your HVAC system running efficiently and extends its lifespan. Our maintenance plans include seasonal tune-ups, filter replacements, and comprehensive system inspections.</p><h2>Maintenance Benefits</h2><ul><li>Lower energy bills</li><li>Fewer breakdowns</li><li>Extended equipment life</li><li>Priority service scheduling</li><li>Discount on repairs</li></ul>",
+            "summary": "Regular maintenance keeps your HVAC system running efficiently and extends its lifespan. Our maintenance plans include seasonal tune-ups, filter replacements, and comprehensive system inspections.Main"
+          },
+          "image": {
+            "url": "https://images.unsplash.com/photo-1621905252507-b35492cc74b4?w=800&q=80",
+            "alt": "HVAC Maintenance",
+            "width": 800,
+            "height": 533,
+            "variations": [
+              {
+                "name": "LARGE",
+                "url": "https://images.unsplash.com/photo-1621905252507-b35492cc74b4?w=800&q=80",
+                "width": 800,
+                "height": 533
+              },
+              {
+                "name": "MEDIUM",
+                "url": "https://images.unsplash.com/photo-1621905252507-b35492cc74b4?w=480&q=80",
+                "width": 480,
+                "height": 320
+              },
+              {
+                "name": "THUMBNAIL",
+                "url": "https://images.unsplash.com/photo-1621905252507-b35492cc74b4?w=200&q=80",
+                "width": 200,
+                "height": 133
+              }
+            ]
+          },
+          "created": {
+            "timestamp": 1760000000
+          }
+        },
+        {
+          "__typename": "NodeService",
+          "id": "service-duct",
+          "title": "Duct Cleaning & Sealing",
+          "path": "/services/duct-cleaning",
+          "body": {
+            "processed": "<p>Improve your indoor air quality and system efficiency with professional duct cleaning and sealing services. We remove dust, allergens, and debris that accumulate in your ductwork over time.</p><h2>What We Do</h2><ul><li>Complete duct system cleaning</li><li>Duct sealing and insulation</li><li>Air quality testing</li><li>Dryer vent cleaning</li><li>UV air purification installation</li></ul>",
+            "summary": "Improve your indoor air quality and system efficiency with professional duct cleaning and sealing services. We remove dust, allergens, and debris that accumulate in your ductwork over time.What We DoC"
+          },
+          "image": {
+            "url": "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=800&q=80",
+            "alt": "Duct Cleaning Service",
+            "width": 800,
+            "height": 533,
+            "variations": [
+              {
+                "name": "LARGE",
+                "url": "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=800&q=80",
+                "width": 800,
+                "height": 533
+              },
+              {
+                "name": "MEDIUM",
+                "url": "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=480&q=80",
+                "width": 480,
+                "height": 320
+              },
+              {
+                "name": "THUMBNAIL",
+                "url": "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=200&q=80",
+                "width": 200,
+                "height": 133
+              }
+            ]
+          },
+          "created": {
+            "timestamp": 1760000000
+          }
+        }
+      ]
+    }
+  }
+}

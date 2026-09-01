@@ -1,0 +1,177 @@
+{
+  "data": {
+    "nodeTestimonials": {
+      "__typename": "NodeTestimonialConnection",
+      "nodes": [
+        {
+          "__typename": "NodeTestimonial",
+          "id": "testimonial-1",
+          "title": "Fast AC Repair",
+          "path": "/testimonials/fast-ac-repair",
+          "body": {
+            "processed": "<p>Our air conditioner broke down on the hottest day of the year. ComfortPro had a technician at our house within 2 hours and had it running again before dinner. Incredible service!</p>",
+            "summary": "Our air conditioner broke down on the hottest day of the year. ComfortPro had a technician at our house within 2 hours and had it running again before dinner. Incredible service!"
+          },
+          "clientName": "Jennifer Walsh",
+          "serviceReceived": "Air Conditioning Repair",
+          "rating": 5,
+          "photo": {
+            "url": "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400&q=80",
+            "alt": "Jennifer Walsh",
+            "width": 800,
+            "height": 533,
+            "variations": [
+              {
+                "name": "LARGE",
+                "url": "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400&q=80",
+                "width": 800,
+                "height": 533
+              },
+              {
+                "name": "MEDIUM",
+                "url": "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400&q=80",
+                "width": 480,
+                "height": 320
+              },
+              {
+                "name": "THUMBNAIL",
+                "url": "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400&q=80",
+                "width": 200,
+                "height": 133
+              }
+            ]
+          },
+          "created": {
+            "timestamp": 1760000000
+          }
+        },
+        {
+          "__typename": "NodeTestimonial",
+          "id": "testimonial-2",
+          "title": "Excellent Furnace Installation",
+          "path": "/testimonials/new-furnace-install",
+          "body": {
+            "processed": "<p>ComfortPro installed a new high-efficiency furnace in our home. The team was professional, clean, and explained everything thoroughly. Our energy bills have dropped significantly.</p>",
+            "summary": "ComfortPro installed a new high-efficiency furnace in our home. The team was professional, clean, and explained everything thoroughly. Our energy bills have dropped significantly."
+          },
+          "clientName": "Robert Martinez",
+          "serviceReceived": "Furnace Installation",
+          "rating": 5,
+          "photo": {
+            "url": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&q=80",
+            "alt": "Robert Martinez",
+            "width": 800,
+            "height": 533,
+            "variations": [
+              {
+                "name": "LARGE",
+                "url": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&q=80",
+                "width": 800,
+                "height": 533
+              },
+              {
+                "name": "MEDIUM",
+                "url": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&q=80",
+                "width": 480,
+                "height": 320
+              },
+              {
+                "name": "THUMBNAIL",
+                "url": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&q=80",
+                "width": 200,
+                "height": 133
+              }
+            ]
+          },
+          "created": {
+            "timestamp": 1760000000
+          }
+        },
+        {
+          "__typename": "NodeTestimonial",
+          "id": "testimonial-3",
+          "title": "Great Maintenance Program",
+          "path": "/testimonials/maintenance-plan",
+          "body": {
+            "processed": "<p>We have been on the annual maintenance plan for 3 years now. Our system runs like new and we have not had a single unexpected breakdown. Worth every penny.</p>",
+            "summary": "We have been on the annual maintenance plan for 3 years now. Our system runs like new and we have not had a single unexpected breakdown. Worth every penny."
+          },
+          "clientName": "Lisa Chen",
+          "serviceReceived": "Preventive Maintenance",
+          "rating": 5,
+          "photo": {
+            "url": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&q=80",
+            "alt": "Lisa Chen",
+            "width": 800,
+            "height": 533,
+            "variations": [
+              {
+                "name": "LARGE",
+                "url": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&q=80",
+                "width": 800,
+                "height": 533
+              },
+              {
+                "name": "MEDIUM",
+                "url": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&q=80",
+                "width": 480,
+                "height": 320
+              },
+              {
+                "name": "THUMBNAIL",
+                "url": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&q=80",
+                "width": 200,
+                "height": 133
+              }
+            ]
+          },
+          "created": {
+            "timestamp": 1760000000
+          }
+        },
+        {
+          "__typename": "NodeTestimonial",
+          "id": "testimonial-4",
+          "title": "Noticeable Air Quality Improvement",
+          "path": "/testimonials/duct-cleaning-review",
+          "body": {
+            "processed": "<p>After having our ducts cleaned by ComfortPro, the difference in air quality was immediately noticeable. My allergies have improved dramatically. Highly recommend their duct cleaning service.</p>",
+            "summary": "After having our ducts cleaned by ComfortPro, the difference in air quality was immediately noticeable. My allergies have improved dramatically. Highly recommend their duct cleaning service."
+          },
+          "clientName": "David Thompson",
+          "serviceReceived": "Duct Cleaning",
+          "rating": 4,
+          "photo": {
+            "url": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&q=80",
+            "alt": "David Thompson",
+            "width": 800,
+            "height": 533,
+            "variations": [
+              {
+                "name": "LARGE",
+                "url": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&q=80",
+                "width": 800,
+                "height": 533
+              },
+              {
+                "name": "MEDIUM",
+                "url": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&q=80",
+                "width": 480,
+                "height": 320
+              },
+              {
+                "name": "THUMBNAIL",
+                "url": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&q=80",
+                "width": 200,
+                "height": 133
+              }
+            ]
+          },
+          "created": {
+            "timestamp": 1760000000
+          }
+        }
+      ]
+    }
+  }
+}
